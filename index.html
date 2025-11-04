@@ -730,15 +730,15 @@
         }
 
         // 2. UPDATED to sum from new structure
-        const totalARPU =
+        const totalAARPU =
           placementData.Interstitial.revenue +
           placementData.Reward.revenue +
           placementData.Banner.revenue;
-        const targetCPI_INR = totalARPU * CURRENCY_CONVERSION_RATE;
+        const targetCPI_INR = totalAARPU * CURRENCY_CONVERSION_RATE;
 
         return {
           revenueDetails: placementData, // Return the full data
-          totalARPU,
+          totalAARPU,
           targetCPI_INR,
         };
       }
@@ -814,7 +814,7 @@
                     <div class="result-summary">
                         <div class="summary-item">
                             <span>Total AARPU (USD)</span>
-                            <strong>$${result.totalARPU.toFixed(6)}</strong>
+                            <strong>$${result.totalAARPU.toFixed(6)}</strong>
                         </div>
                         <div class="summary-item main-cpi">
                             <span>LTV (INR)</span>
